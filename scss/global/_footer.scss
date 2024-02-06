@@ -1,0 +1,198 @@
+/*==========================================================================*/
+/*                              F O O T E R                                 */
+/*==========================================================================*/
+
+.footer {
+    margin-bottom: 160.38px;
+    &_top {
+        padding: 100px 0 90px;
+        display: flex;
+        column-gap: 25px;
+        justify-content: space-between;
+        &-content {
+            p {
+                @include text(var(--fs-18), var(--font-family), 700, #333333, none);
+                .large {
+                    font-size: 24px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            .logo {
+                img {
+                    width: 105px;
+                }
+            }
+            .company {
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+                &_logo {
+                    width: 94px;
+                }
+                &_name {
+                    @include text(24px, var(--font-family), 700, #333333, none);
+                    .large {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .contact {
+                &_tel {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 16px;
+                    &-icon {
+                        padding-top: 35px;
+                        @include text(15px, var(--font-family), 700, var(--color-black), none);
+                        letter-spacing: 0.08em;
+                        background: url(../images/contact-ico.png) center top/63px auto no-repeat;
+                    }
+                    &-num {
+                        padding-top: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        @include text(47px, var(--font-family), 400, var(--color-black), none);
+                    }
+                    &-detail {
+                        @include text(14px, var(--font-family), 700, var(--color-black), none);
+                        line-height: 2.25em;
+                        span {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        &-map {
+
+        }
+    }
+    &_bottom {
+        position: relative;
+        width: 101%;
+        padding: 8px 0;
+        background: #333333;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        transition: .4s;
+        &.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-contact {
+            display: flex;
+            align-items: center;
+            column-gap: 25px;
+            flex-shrink: 0;
+            .contact {
+                &_title {
+                    margin-bottom: 0;
+                    @include text(16px, var(--font-family), 700, var(--color-white), none);
+                    line-height: 1.6em;
+                    letter-spacing: 0.1em;
+                    text-align: right;
+                }
+                &_tel {
+                    margin-top: 6px;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 8px;
+                    &-icon {
+                        padding-top: 30px;
+                        @include text(12.6px, var(--font-family), 700, var(--color-white), none);
+                        letter-spacing: 0.08em;
+                        background: url(../images/contact-ico.png) center top/53px auto no-repeat;
+                    }
+                    &-num {
+                        padding-top: 4px;
+                        display: flex;
+                        flex-direction: column;
+                        @include text(39.25px, var(--font-family), 400, var(--color-white), none);
+                        letter-spacing: 0.03em;
+                    }
+                    &-detail {
+                        @include text(12px, var(--font-family), 700, var(--color-white), none);
+                        line-height: 2em;
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        &-btn {
+            display: flex;
+            column-gap: 10px;
+            .btn {
+                &_item {
+                    &.line {
+                        display: flex;
+                        align-items: center;
+                        background: var(--color-green);
+                        img {
+                            max-width: 34px;
+                        }
+                        a {
+                            background: url(../images/line-icon.png) 9px center/32px auto no-repeat;
+                            height: fit-content;
+                        }
+                    }
+                    &.mail {
+                        background: var(--color-orange);
+                        img {
+                            max-width: 28px;
+                        }
+
+                        a {
+                            padding-left: 67px;
+                            background: url(../images/mail-ico.png) 20px center/28px auto no-repeat;
+                        }
+                    }
+                    a {
+                        padding: 8px 15px 5px 50px;
+                        position: relative;
+                        height: 100%;
+                        min-width: 240px;
+                        display: block;
+                        .top {
+                            @include text(13px, var(--font-family), 700, var(--color-white), none);
+                            letter-spacing: 0.08em;
+                            &.big {
+                                font-size: 14px;
+                            }
+                        }
+                        .bottom {
+                            @include text(14px, var(--font-family), 700, var(--color-white), none);
+                            line-height: 1.9em;
+                            letter-spacing: 0.07em;
+                            .large {
+                                font-size: 18px;
+                                color: var(--color-yellow);
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+address {
+    margin-bottom: 59px;
+    text-align: center;
+    @include text(14px, var(--font-family), 700, var(--color-black), none);
+    letter-spacing: 0.08em;
+}

@@ -1,0 +1,70 @@
+﻿@charset "UTF-8";
+
+
+dl.mailform {
+	width: 100%;
+	display: flex;
+	column-gap: 20px;
+	align-items: center;
+}
+
+dl.mailform:last-child dt {
+	display: none;
+}
+
+dl.mailform:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+dl.mailform dt {
+	margin-top: 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	min-width: 72px;
+	flex-shrink: 0;
+}
+
+dl.mailform dt .name {
+	font-family: var(--font-yumincho);
+	font-size: 20px;
+	font-weight: 400;
+	text-align: right;
+	letter-spacing: -0.1em;
+	line-height: 1em;
+	color: var(--color-black);
+}
+
+dl.mailform dd {
+	width: 100%;
+	font-size: 12px;
+}
+
+dl.mailform dd input {
+	width: 100% !important;
+	border: 1px solid #8c8c8c;
+	font-family: var(--font-yumincho);
+	font-size: 20px;
+	font-weight: 400;
+	color: var(--color-black);
+}
+
+dl.mailform dd input#submit_confirm {
+	font-weight: 700;
+	color: var(--color-white);
+}
+
+dl.mailform:not(:last-child) dd input {
+	height: 48px !important;
+}
+
+@media screen and (max-width: 575px) { 
+	dl.mailform:not(:last-child) dd input {
+		height: 40px !important;
+	}
+}
+
+dt.fmail_error_line, dd.fmail_error_line, .fmail_error {
+	background-color: none;
+	color: #FF0000;
+}

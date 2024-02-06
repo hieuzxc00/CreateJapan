@@ -1,0 +1,205 @@
+/*==========================================================================*/
+/*                     H O V E R    &    P C    O N L Y                     */
+/*==========================================================================*/
+
+@media screen and (min-width: 751px) {
+    #lightboxOverlay,
+    #lightbox {
+        min-width: var(--content-width) !important;
+        width: 100% !important;
+    }
+
+    .sp {
+        display: none !important;
+    }
+
+    .lap {
+        display: none !important;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .btn-hover:hover {
+        opacity: 0.7;
+    }
+
+    .to-top a:hover {
+        opacity: 0.7;
+    }
+
+    .case_slider-thumb {
+        .slick-slide:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .case_carousel-arrow:hover {
+        opacity: 0.6;
+    }
+
+    #side-navi:hover .list-navi .text {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    #side-navi .list-navi a:hover .text {
+        opacity: 0.8;
+        background: var(--color-primary);
+        color: var(--color-white);
+    }
+    /* END screen-min:751px */
+}
+
+
+
+@media screen and (min-width: 751px) and (max-width: 1820px) {
+    .header_right-contact {
+        margin: 0 20px;
+    }
+    .note {
+        background: url(../images/note_pc.png) 36% center/cover no-repeat;
+    }
+    .header_left-company {
+        font-size: 18px;
+    }
+    .header_right-contact {
+        .contact_title {
+            font-size: 16px;
+        }
+        .contact_tel-num {
+            font-size: 34px;
+        }
+    }
+    .header_right-btn {
+        .btn_item-title {
+            font-size: 15px;
+        }
+        .btn_item-sub {
+            font-size: 20px;
+        }
+        .btn_item a {
+            padding: 15px;
+        }
+    }
+    
+    .support_bottom, .support_mid {
+        margin-top: 0;
+    }
+    .support_top-sub {
+        img {
+            width: 360px;
+        }
+    }
+    .pickme_bottom {
+        background: url(../images/pickme_bg05.jpg) -5px 43.7%/40% auto no-repeat,url(../images/pickme_bg06.jpg) 118% 58%/70% auto no-repeat;
+    }
+    
+    /* END screen-min:751px && screen-max:1820px */
+}
+
+@media screen and (min-width: 751px) and (max-width: 1500px) {
+    .pickme_mid .inner::before {
+        transform: translateX(0) scale(0.7);
+        transform-origin: top;
+    }
+    .header_right-btn {
+        display: none;
+    }
+    .header_right-contact {
+        margin-right: 0;
+    }
+    .support_content {
+        padding-right: 15px;
+    }
+    .support_content-heading {
+        span {
+            font-size: 52px;
+        }   
+        img {
+            width: 128px;
+        }
+    }
+    .support_content-desc {
+        font-size: 24px;
+    }
+    .support_mid2  {
+        margin-top: -10%;
+    }
+    .support_mid-content {
+        padding: 50px 60px;
+    }
+
+    .pickme_bottom-flow .flow_item-content .title::after {
+        font-size: 160px;
+        top: -65px;
+        left: -20px;
+    }
+
+    .pickme_bottom-heading::before {
+        font-size: 160px;
+        bottom: 20px;
+        left: -20px;
+    }
+    .pickme_top-heading::after {
+        transform: translate(75px, 78%);
+        background-size: 185px auto;
+    }
+    .greeting_promo {
+        width: 92%;
+        margin: 0 auto;
+    }
+    .greeting_promo-top .top_heading {
+        font-size: 22px;
+        .num {
+            font-size: 48px;
+        }
+        .large {
+            font-size: 28px;
+        }
+    }
+
+    .pickme_bottom-flow .flow_item .flow_item-img {
+        width: 45%;
+    }
+    .pickme_bottom-flow .flow_item:nth-child(2) .flow_item-img p, .pickme_bottom-flow .flow_item:nth-child(3) .flow_item-img p {
+        width: auto;
+    }
+    .pickme_bottom-flow .flow_item .flow_item-content {
+        width: 55%;
+    }
+    .pickme_bottom-flow .flow_item-content .title_main {
+        font-size: 44px;
+    }
+    .greeting {
+        background: url(../images/greeting01.png) calc(100% - 55px) 32.7%/auto no-repeat,url(../images/greeting_bg01.png) 101.2% -15%/1050px auto no-repeat,url(../images/greeting_bg02.png) -460px 101.5%/auto no-repeat,#f9f6f3;
+    }
+    /* END screen-min:751px && screen-max:1500px */
+}
+
+@media screen and (min-width: 751px) and (max-width: 1279px) { 
+    .case_carousel-arrow {
+        img {
+            width: 15px;
+        }
+        &.arrow-next {
+            right: -15px;
+        }
+        &.arrow-prev {
+            left: -15px;
+        }
+    }
+    .lap {
+        display: block !important;
+    }
+    .header_left-gg {
+        position: absolute;
+        transform: translate(0, 80%) scale(0.8);
+        &::before {
+            top: -1px;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+    }
+}

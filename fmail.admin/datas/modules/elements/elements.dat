@@ -1,0 +1,4 @@
+1262055277	6500	メール		size_4				text	mail	onchange="mailadjust(this.id);"														1					email				
+1240790859	5970	お名前		size_3				text	none															1					text				
+1240791078	5790	住所		size_3				text	none															1					text				
+1244884266	5770	携帯番号		size_3				text	mobilephone	onchange="numadjust(this.id);"														1					tel				

@@ -1,0 +1,169 @@
+/*==========================================================================*/
+/*                              H E A D E R                                 */
+/*==========================================================================*/
+
+.header {
+    position: relative;
+    padding: 0 22px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    &_left {
+        display: flex;
+        column-gap: 17px;
+        align-items: center;
+        &-logo {
+            padding: 15px 20px;
+            background: var(--color-yellow);
+            img {
+                max-width: 105px;
+            }
+        }
+        &-inner {
+            padding: 27px 0 24px;
+            display: flex;
+            column-gap: 24px;
+            align-items: center
+        }
+        &-company {
+            @include text(24px, var(--font-family), 700, #333333, none);
+            letter-spacing: -0.04em;
+            line-height: 1.4em;
+            span {
+                color: var(--color-primary);
+            }
+        }
+        &-gg {
+            position: relative;
+            padding: 15px 18px 10px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 5px;
+            border: 1px solid var(--color-black);
+            background: var(--color-white);
+            transition: .3s;
+            span {
+                @include text(var(--fs-18), var(--font-family), 700, var(--color-black), none);
+                line-height: 1.1em;
+                letter-spacing: -0.025em;
+                .num {
+                    @include text(24px, var(--font-family), 700, var(--color-primary), none);
+                    letter-spacing: 0.08em;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -1px;
+                transform: translate(-50%, -50%) rotate(45deg);
+                width: 11px;
+                height: 11px;
+                background: var(--color-white);
+                border-left: 1px solid var(--color-black);
+                border-bottom: 1px solid var(--color-black);
+            }
+        }
+    }
+    &_right {
+        display: flex;
+        &-contact {
+            margin: 0 60px;
+            transition: .4s;
+            .contact {
+                &_title {
+                    margin-bottom: 10px;
+                    @include text(var(--fs-18), var(--font-family), 700, var(--color-black), none);
+                    letter-spacing: -0.07em;
+                    line-height: 2.4em;
+                    text-decoration: underline;
+                    text-underline-offset: 10px;
+                }
+                &_tel {
+                    display: flex;
+                    column-gap: 12px;
+                    &-icon {
+                        padding-top: 30px;
+                        @include text(12.6px, var(--font-family), 700, var(--color-black), none);
+                        letter-spacing: 0.08em;
+                        background: url(../images/contact-ico.png) center top/53px auto no-repeat;
+                    }
+                    &-num {
+                        padding-top: 2px;
+                        display: flex;
+                        flex-direction: column;
+                        @include text(39.25px, var(--font-family), 400, var(--color-black), none);
+                    }
+                    &-detail {
+                        @include text(12px, var(--font-family), 700, var(--color-black), none);
+                        line-height: 2em;
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        &-btn {
+            padding-bottom: 17px;
+            display: flex;
+            column-gap: 10px;
+            .btn {
+                &_item {
+                    &.line {
+                        background: var(--color-green);
+                        img {
+                            max-width: 34px;
+                        }
+                    }
+                    &.mail {
+                        background: var(--color-orange);
+                        img {
+                            max-width: 28px;
+                        }
+                    }
+                    a {
+                        position: relative;
+                        height: 100%;
+                        padding: 15px 24px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center; 
+                        justify-content: center;
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            right: 4px;
+                            bottom: 0;
+                            border-left: solid 7px var(--color-black);
+                            border-top: solid 7px rgba(0,0,0,0);
+                            border-bottom: solid 7px rgba(0,0,0,0);
+                            transform: rotate(45deg);
+                            opacity: 0.4;
+                        }
+                    }
+                    &-title {
+                        @include text(var(--fs-18), var(--font-family), 400, var(--color-white), uppercase);
+                        line-height: 1.2em;
+                        text-align: center
+                    }
+                    &-sub {
+                        margin-bottom: 5px;
+                        @include text(22px, var(--font-family), 400, var(--color-yellow), uppercase);
+                        line-height: 1.2em;
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+h1 {
+    img {
+        max-width: 94px;
+    }
+}
